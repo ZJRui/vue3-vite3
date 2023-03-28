@@ -1,12 +1,12 @@
 <template>
-<a-layout-content>
-        <!----此位置可加面包屑-->
-        <div>
-            <transition name="page-toggle">
-                <router-view class="app-content" />
-            </transition>
-        </div>
-    </a-layout-content>
+    <transition name="page-toggle">
+        <router-view class="app-content" />
+    </transition>
 </template>
-<style scoped>
+<style lang="less" scoped>
+.app-content{
+    padding: 15px 15px 0px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+}
 </style>
