@@ -1,5 +1,5 @@
 <template>
-    <div>home</div>
+    <div>登录页</div>
 </template>
 <script>
 import User from '@/api/user';

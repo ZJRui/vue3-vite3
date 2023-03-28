@@ -16,4 +16,15 @@ const router = createRouter({
   },
 });
 
+//路由守卫
+router.beforeEach((to, from, next)=>{
+  document.title = to.meta.title || "后台";
+  const role = true;// localStorage.getItem("userName")
+  if(!role && to.path !== "/login"){
+    next("/login");
+  }else{
+    next();
+  }
+});
+
 export default router;
