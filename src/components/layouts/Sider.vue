@@ -1,60 +1,35 @@
 <template>
-<t-menu theme="light" value="dashboard" style="margin-right: 50px" height="550px">
-    <t-menu-item value="dashboard">
+<div :style="{ background: 'var(--bg-color-page)' }">
+    <t-menu expandMutex>
+      <t-menu-item value="0">
         <template #icon>
-        <t-icon name="dashboard" />
+          <t-icon name="app" />
         </template>
         仪表盘
-    </t-menu-item>
-    <t-menu-item value="resource">
+      </t-menu-item>
+      <t-submenu value="1" title="资源列表">
         <template #icon>
-        <t-icon name="server" />
+          <t-icon name="code" />
         </template>
-        资源列表
-    </t-menu-item>
-    <t-menu-item value="root">
+        <t-menu-item value="1-1">
+          <span>菜单二</span>
+        </t-menu-item>
+      </t-submenu>
+      <t-submenu value="2" title="调度平台">
         <template #icon>
-        <t-icon name="root-list" />
+          <t-icon name="file" />
         </template>
-        根目录
-    </t-menu-item>
-    <t-menu-item value="control-platform">
-        <template #icon>
-        <t-icon name="control-platform" />
-        </template>
-        调度平台
-    </t-menu-item>
-    <t-menu-item value="precise-monitor">
-        <template #icon>
-        <t-icon name="precise-monitor" />
-        </template>
-        调度平台
-    </t-menu-item>
-    <t-menu-item value="mail">
-        <template #icon>
-        <t-icon name="mail" />
-        </template>
-        消息区
-    </t-menu-item>
-    <t-menu-item value="user-circle">
-        <template #icon>
-        <t-icon name="user-circle" />
-        </template>
-        个人中心
-    </t-menu-item>
-    <t-menu-item value="play-circle">
-        <template #icon>
-        <t-icon name="play-circle" />
-        </template>
-        视频区
-    </t-menu-item>
-    <t-menu-item value="edit1">
-        <template #icon>
-        <t-icon name="edit-1" />
-        </template>
-        资源编辑
-    </t-menu-item>
-</t-menu>
+        <t-submenu value="2-1" title="二级菜单-1">
+          <t-menu-item value="3-1">三级菜单-1</t-menu-item>
+          <t-menu-item value="3-2">三级菜单-2</t-menu-item>
+          <t-menu-item value="3-3">三级菜单-3</t-menu-item>
+        </t-submenu>
+        <t-menu-item value="2-2">
+          <span>二级菜单-2</span>
+        </t-menu-item>
+      </t-submenu>
+    </t-menu>
+  </div>
 </template>
 
 <script setup>
