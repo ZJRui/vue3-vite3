@@ -30,7 +30,8 @@ import AppFooter from './Footer.vue'
 .t-layout{
     height: 100%;
     .t-layout__content{
-        height: calc(100% - 36px);
+        height: 100%;
+        padding: 15px;
     }
     .t-layout__footer{
         width: 100%;
