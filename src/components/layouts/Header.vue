@@ -14,13 +14,13 @@
     </t-head-menu>
 </template>
 <script setup>
-import { useSettingStore } from '@/store';
-const settingStore = useSettingStore();
-const changeCollapsed = () => {
-  settingStore.updateConfig({
-    isSidebarCompact: !settingStore.isSidebarCompact,
-  });
-};
+// import { useSettingStore } from '@/store';
+// const settingStore = useSettingStore();
+// const changeCollapsed = () => {
+//   settingStore.updateConfig({
+//     isSidebarCompact: !settingStore.isSidebarCompact,
+//   });
+// };
 </script>
 <style scoped>
 </style>
