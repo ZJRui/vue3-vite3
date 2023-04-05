@@ -14,13 +14,15 @@
     </t-head-menu>
 </template>
 <script setup>
-// import { useSettingStore } from '@/store';
-// const settingStore = useSettingStore();
-// const changeCollapsed = () => {
-//   settingStore.updateConfig({
-//     isSidebarCompact: !settingStore.isSidebarCompact,
-//   });
-// };
+import { storeToRefs } from 'pinia';
+import { useSettingStore } from '@/store';
+const settingStore = useSettingStore();
+const {showSettingPanel} = storeToRefs(settingStore)
+const changeCollapsed = () => {
+  settingStore.updateConfig({
+    showSettingPanel: !showSettingPanel,
+  });
+};
 </script>
 <style scoped>
 </style>

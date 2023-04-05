@@ -5,7 +5,7 @@
         <template #icon>
           <t-icon name="app" />
         </template>
-        仪表盘
+        仪表盘{{ showSettingPanel }}
       </t-menu-item>
       <t-submenu value="1" title="金融频道">
         <template #icon>
@@ -42,9 +42,10 @@
 </template>
 
 <script setup>
-const openHref = (url) => {
-  window.open(url);
-};
+import { storeToRefs } from 'pinia';
+import { useSettingStore } from '@/store';
+const settingStore = useSettingStore();
+const {showSettingPanel} = storeToRefs(settingStore)
 </script>
 
 <style lang="less" scoped>
