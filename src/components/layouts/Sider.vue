@@ -1,11 +1,11 @@
 <template>
-<div :style="{ background: 'var(--bg-color-page)' }">
-    <t-menu expandMutex>
+<div :style="{ background: 'var(--bg-color-page)'}">
+    <t-menu expandMutex :collapsed="showSettingPanel">
       <t-menu-item value="0" :to="'/home'">
         <template #icon>
           <t-icon name="app" />
         </template>
-        仪表盘{{ showSettingPanel }}
+        仪表盘
       </t-menu-item>
       <t-submenu value="1" title="金融频道">
         <template #icon>
@@ -46,8 +46,11 @@ import { computed } from 'vue';
 import { useSettingStore } from '@/store';
 const settingStore = useSettingStore();
 const showSettingPanel = computed(()=>settingStore.showSettingPanel);
+const widthSider = computed(()=>showSettingPanel ? '232px' : '64px');
 </script>
 
-<style lang="less" scoped>
-
+<style lang="less">
+.t-layout__sider{
+  width: v-bind(widthSider);
+}
 </style>

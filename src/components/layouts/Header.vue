@@ -2,9 +2,11 @@
     <t-head-menu value="item1" height="120px">
         <template #logo>
             <img width="136" class="logo" src="https://www.tencent.com/img/index/menu_logo_hover.png" alt="logo" />
-            <t-button theme="default" shape="square" variant="text" @click="changeCollapsed">
-                <t-icon class="collapsed-icon" name="view-list" />
-            </t-button>
+            <div class="header-operate-left">
+                <t-button theme="default" shape="square" variant="text" @click="changeCollapsed">
+                    <t-icon class="collapsed-icon" name="view-list" />
+                </t-button>
+            </div>
         </template>
         <template #operations>
             <a href="javascript:;"><t-icon class="t-menu__operations-icon" name="search" /></a>
@@ -21,4 +23,10 @@ const changeCollapsed = () => {
 };
 </script>
 <style scoped>
+.header-operate-left {
+  display: flex;
+  align-items: normal;
+  line-height: 0;
+  padding-left: var(--td-comp-margin-xl);
+}
 </style>
