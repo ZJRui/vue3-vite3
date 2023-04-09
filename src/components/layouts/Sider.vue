@@ -42,10 +42,10 @@
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia';
+import { computed } from 'vue';
 import { useSettingStore } from '@/store';
 const settingStore = useSettingStore();
-const {showSettingPanel} = storeToRefs(settingStore)
+const showSettingPanel = computed(()=>settingStore.showSettingPanel);
 </script>
 
 <style lang="less" scoped>

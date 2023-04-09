@@ -14,14 +14,10 @@
     </t-head-menu>
 </template>
 <script setup>
-import { storeToRefs } from 'pinia';
 import { useSettingStore } from '@/store';
 const settingStore = useSettingStore();
-const {showSettingPanel} = storeToRefs(settingStore)
 const changeCollapsed = () => {
-  settingStore.updateConfig({
-    showSettingPanel: !showSettingPanel,
-  });
+  settingStore.updateConfig(!settingStore.showSettingPanel);
 };
 </script>
 <style scoped>

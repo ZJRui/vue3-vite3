@@ -1,12 +1,10 @@
 import { defineStore } from 'pinia';
 
-const state = {
-  showSettingPanel: false,
-};
-
-
 export const useSettingStore = defineStore('setting', {
-  state: () => state,
+  state: () => ({
+    showSettingPanel: false,
+  }),
+  getters: {},
   actions: {
     updateConfig(showSettingPanel) {
       this.showSettingPanel = showSettingPanel;
