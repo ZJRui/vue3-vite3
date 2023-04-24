@@ -6,7 +6,8 @@ export default {
             mounted(el, val) {
                 const action = val.value.action;
                 const effect = val.value.effect;
-                if (router.currentRoute.value.meta.rights.includes(action)) {
+                const rights = router.currentRoute.value.meta.rights;
+                if (!rights.includes(action)) {
                     if(effect === 'disabled'){
                         // 仅仅是禁用按钮，并不删除此按钮
                         el.disabled = true;
