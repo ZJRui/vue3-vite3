@@ -21,7 +21,8 @@ export default [
           path: '/home',
           name: 'home',
           meta: {
-            title:"首页"
+            title:"首页",
+            rights: ['views', 'add'],
           },
           component: () => import('@/views/Home.vue')
       },

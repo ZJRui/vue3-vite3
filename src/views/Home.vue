@@ -1,6 +1,8 @@
 <template>
-    <div class="tdesign-demo-item--layout">
-        home
+    <div>
+        <t-button v-access="{action:'adds', effect:'disabled'}">
+            按钮
+        </t-button>
     </div>
-  </template>
+</template>
   

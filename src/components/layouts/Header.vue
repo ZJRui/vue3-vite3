@@ -3,7 +3,7 @@
         <template #logo>
             <img width="136" class="logo" src="https://www.tencent.com/img/index/menu_logo_hover.png" alt="logo" />
             <div class="header-operate-left">
-                <t-button theme="default" shape="square" variant="text" @click="changeCollapsed">
+                <t-button v-permission="'add'" theme="default" shape="square" variant="text" @click="changeCollapsed">
                     <t-icon class="collapsed-icon" name="view-list" />
                 </t-button>
             </div>
