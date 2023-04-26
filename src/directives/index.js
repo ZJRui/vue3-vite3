@@ -5,7 +5,7 @@ export default {
         app.directive('access', {
             mounted(el, val) {
                 const action = val.value.action;
-                const effect = val.value.effect;
+                //const effect = val.value.effect;
                 const rights = router.currentRoute.value.meta.rights;
                 //&& effect === 'disabled'
                 // if (rights.includes(action)) {
@@ -17,7 +17,9 @@ export default {
                 //     el.parentNode.removeChild(el); 
                 // }
                 if (!rights.includes(action)) {
-                    el.parentNode.removeChild(el); 
+                    
+                    el.classList.add('t-is-disabled')
+                    //el.parentNode.removeChild(el); 
                 }
             }
         })
