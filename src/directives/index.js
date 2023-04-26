@@ -7,15 +7,17 @@ export default {
                 const action = val.value.action;
                 const effect = val.value.effect;
                 const rights = router.currentRoute.value.meta.rights;
+                //&& effect === 'disabled'
+                // if (rights.includes(action)) {
+                //     // 仅仅是禁用按钮，并不删除此按钮
+                //     el.disabled = true;
+                //     // element 对按钮的要求
+                //     el.classList.add('is-disabled')
+                // }else{
+                //     el.parentNode.removeChild(el); 
+                // }
                 if (!rights.includes(action)) {
-                    if(effect === 'disabled'){
-                        // 仅仅是禁用按钮，并不删除此按钮
-                        el.disabled = true;
-                        // element 对按钮的要求
-                        el.classList.add('is-disabled')
-                    }else{
-                        el.parentNode.removeChild(el);
-                    }
+                    el.parentNode.removeChild(el); 
                 }
             }
         })
