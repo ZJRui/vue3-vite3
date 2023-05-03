@@ -1,8 +1,8 @@
 <template>
 <div :style="{ background: 'var(--bg-color-page)'}">
     <t-menu expandMutex :collapsed="showSettingPanel">
-      <template v-for="item in menusList">
-        <Menu :menusObj="item" />
+      <template v-for="(item, index) in menusList" :key="index">
+        <Menu :menusObj="item"></Menu>
       </template>
     </t-menu>
   </div>

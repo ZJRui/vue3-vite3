@@ -4,8 +4,8 @@
         <template v-if="menusObj.icon && menusObj.parentId==0" #icon>
           <t-icon :name="menusObj.icon" />
         </template>
-        <template v-for="item in menusObj.children">
-            <Menu :menusObj="item" />
+        <template v-for="(item, index) in menusObj.children" :key="index">
+            <Menu :menusObj="item"></Menu>
         </template>
       </t-submenu>
     </template>
