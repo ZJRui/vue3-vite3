@@ -30,14 +30,13 @@ export const useSettingStore = defineStore('setting', {
     },
     getMenus() {
       this.menus = [
-        {id:1, title:"首页", parentId:"0", url:"/home", icon:"app", access:['views', 'add']},
-        {id:2, title:"财经频道", parentId:"0", url:"/caijing", icon:"view-module", access:['views', 'add']},
-        {id:3, title:"关于", parentId:"0", url:"/about", icon:"view-module", access:['views', 'add']},
-        {id:4, title:"股票", parentId:"2", url:"/gupiao", icon:"view-module", access:['views', 'add']},
-        {id:5, title:"基金", parentId:"2", url:"/jijin", icon:"view-module", access:['views', 'add']},
-        {id:6, title:"股票1", parentId:"4", url:"/gupp", icon:"view-module", access:['views', 'add']},
+        {id:1, name:"home", title:"首页", parentId:"0", url:"/home", views:"/views/Home.vue", icon:"app", access:['views', 'add']},
+        {id:2, name:"caijing", title:"财经频道", parentId:"0", url:"/caijing", views:"/views/Caijin.vue", icon:"view-module", access:['views', 'add']},
+        {id:3, name:"about", title:"关于", parentId:"0", url:"/about", views:"/views/About.vue", icon:"view-module", access:['views', 'add']},
+        {id:4, name:"gupiao", title:"股票", parentId:"2", url:"/gupiao", views:"/views/Gupiao.vue", icon:"view-module", access:['views', 'add']},
+        {id:5, name:"jijin", title:"基金", parentId:"2", url:"/jijin", views:"/views/Jijin.vue", icon:"view-module", access:['views', 'add']},
+        {id:6, name:"gupp", title:"股票1", parentId:"4", url:"/gupp", views:"/views/gupp.vue", icon:"view-module", access:['views', 'add']},
       ];
-      console.log("menus:"+JSON.stringify(this.menus));
     }
   }
 });
