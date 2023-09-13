@@ -2,9 +2,10 @@ import axios from 'axios';
 
 // 创建请求实例
 const instance = axios.create({
-  baseURL: '/api',
+  // baseURL: '/api',
+  baseURL: "",
   // 指定请求超时的毫秒数
-  timeout: 1000,
+  timeout: 40000,
   // 表示跨域请求时是否需要使用凭证
   withCredentials: false,
 });
@@ -29,10 +30,18 @@ instance.interceptors.request.use(
 // 后置拦截器（获取到响应时的拦截）
 instance.interceptors.response.use(
   (response) => {
+    console.log('response', response)
     /**
      * 根据你的项目实际情况来对 response 和 error 做处理
      * 这里对 response 和 error 不做任何处理，直接返回
      */
+    /**
+     * 需要从请求头中保存cookie信息
+     */
+    if (response.data.code === '302') {
+
+    }
+
     return response;
   },
   (error) => {

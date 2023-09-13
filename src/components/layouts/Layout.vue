@@ -24,6 +24,10 @@ import AppHeader from './Header.vue'
 import AppSider from './Sider.vue'
 import AppContent from './Content.vue'
 import AppFooter from './Footer.vue'
+
+
+
+
 </script>
 
 <style lang="less" scoped>

@@ -1,5 +1,7 @@
 import { post } from '@/utils/request';
 
+
+//QUESTION  以类的方式暴漏API吗？
 export default class User {
   /**
    * 登录

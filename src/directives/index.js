@@ -2,7 +2,7 @@ import router from '@/router'
 export default {
     install(app) {
         // 权限控制, 没有相关的权限, 则删除模块
-        app.directive('access', {
+        app.directive('vcess', {
             mounted(el, val) {
                 const action = val.value.action;
                 //const effect = val.value.effect;
