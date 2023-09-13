@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .containers {
+            display: flex;
+            outline: 1px dotted;
+            counter-reset: index;
+            max-width: 320px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="containers">
+        <div><img src="https://demo.cssworld.cn/new/images/nature-7.jpg"></div>
+        <div><img src="https://demo.cssworld.cn/new/images/wallpaper-3.jpg"></div>
+        <div><img src="https://demo.cssworld.cn/new/images/nature-8.jpg"></div>
+        <div><img src="https://demo.cssworld.cn/new/images/wallpaper-2.jpg"></div>
+    </div>
+
+    <!-- <div style="display: flex; width: 320px;">
+
+        <div style="width: 100px; border: 2px yellow solid;">
+            1
+        </div>
+        <div style="width: 100px; border: 2px yellow solid;">2</div>
+        <div style="width: 100px; border: 2px yellow solid;">3</div>
+        <div style="width: 100px; border: 2px yellow solid;">4</div>
+    </div> -->
+    <div style="display: flex; width: 320px; border: 2px red solid;">
+
+        <div style="width: 100px; padding: 20px;  margin: 20px;">
+            <p>弹性布局 在允许 收缩，但是不允许换行的条件下 为什么没有收缩而是溢出了？</p>
+        </div>
+        <div style="width: 100px;padding: 20px;">
+            <p>弹性布局 在允许 收缩，但是不允许换行的条件下 为什么没有收缩而是溢出了？</p>
+        </div>
+        <div><img src="https://demo.cssworld.cn/new/images/wallpaper-3.jpg"></div>
+        <div style="padding: 20px; margin: 20px;">
+            <p>弹性布局 在允许 收缩，但是不允许换行的条件下 为什么没有收缩而是溢出了？</p>
+
+        </div>
+        <div style="padding: 20px; margin: 20px;">
+            <p>弹性布局 在允许 收缩，但是不允许换行的条件下 为什么没有收缩而是溢出了？</p>
+        </div>
+        <div style="padding: 20px; margin: 20px;">
+            <p>弹性布局 在允许 收缩，但是不允许换行的条件下 为什么没有收缩而是溢出了？</p>
+        </div>
+        <div style="padding: 20px; margin: 20px;">
+            <p>弹性布局 在允许 收缩，但是不允许换行的条件下 为什么没有收缩而是溢出了？</p>
+        </div>
+    </div>
+
+    <div>
+        <p>测试flex=1</p>
+        <div style="display:flex;width:  400px;">
+            <p style="flex:1">测试文字：弹性布局 弹性布局弹性布局 而弹性布局 而弹性布局 而弹性布局 而 而 而弹性布局 而是</p>
+            <p style="flex:1">张三</p>
+            <p style="flex:1">张三</p>
+            <p style="flex:1">张三</p>
+            <p style="flex:1">张三</p>
+        </div>
+    </div>
+    <div style="display: flex; width: 320px; border: 2px red solid;">
+
+        <div >
+            <img  style="width: 100px;" src="https://demo.cssworld.cn/new/images/nature-7.jpg" />
+        </div>
+        <div >
+            <img style="height: 100px;" src="https://demo.cssworld.cn/new/images/wallpaper-3.jpg" />
+        </div>
+        <div >
+            <img  style="width: 100px;" src="https://demo.cssworld.cn/new/images/nature-8.jpg" />
+
+        </div>
+        <div  >
+            <img style="height: 100px;" src="https://demo.cssworld.cn/new/images/wallpaper-2.jpg" />
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+@import url('./style/variables.css');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -72,6 +74,7 @@ button:focus-visible {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  overflow-y: scroll;
   margin: 0;
   padding: 0;
 }
@@ -86,5 +89,25 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  :root {
+    --vp-screen-max-width: 1482px;
+    --vp-sidebar-width-small: 290px;
+  }
+  .sidebar {
+    padding: 48px 48px 96px calc((100vw - var(--vp-screen-max-width)) / 2);
+    width: calc((100vw - var(--vp-screen-max-width)) / 2 + var(--vp-sidebar-width-small));
+  }
+}
+
+@media screen and (min-width: 960px) and (min-width: 1440px) {
+  .page-content.has-sidebar {
+    padding-left: calc(
+      ( 100% - var(--vp-screen-max-width)) / 2 + var(--vp-sidebar-width-small)
+      );
+    
   }
 }

@@ -1,0 +1,22 @@
+/* 深度选择器 */
+/*:deep(selector) {
+    //...
+}*/
+/* 插槽选择器 */
+/*:slotted(selector) {
+    //...
+}*/
+/* 全局选择器 */
+/*:global(selector) {
+    //...
+}*/
+
+/**
+:root 伪类选择的是文档的根元素，通常是 HTML文档中的 <html> 元素。
+*/
+:root {
+  --vp-screen-max-width: 1376px;
+  --vp-screen-min-width: 290px;
+  --vp-sidebar-width-small: 290px;
+}
+

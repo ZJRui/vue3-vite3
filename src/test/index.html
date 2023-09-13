@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    *,
+    :before,
+    :after {
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 12;
+    }
+
+    .nav-wrapper {
+        padding: 0 32px;
+        position: relative;
+        top: 0;
+        background-size: 4px 4px;
+        height: 55px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .header-container {
+        max-width: 1482px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .logo-container[data-v-74f3ae96] {
+        display: flex;
+        align-items: center;
+        height: 55px;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    #headerAHref>a {
+
+        padding: 0 12px;
+        line-height: 50px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        border-bottom: 2px solid transparent
+    }
+
+    .el-scrollbar {
+        padding: 48px 48px 96px 100px;
+        width: 350px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: beige;
+        height: 320px;
+        top: 55px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    .el_scroll_view {
+        width: 240px;
+        height: 3300px;
+
+    }
+    .el_scroll_view > p{
+        margin-top:200px;
+    }
+
+    .main {
+        padding-left: 400px;
+        padding-top: 55px;
+    }
+
+    .doc-content-wrapper {
+        display: flex;
+        padding: 64px 0 42px 96px;
+
+    }
+
+    .doc-content-container {
+        height: 2076px;
+    }
+</style>
+
+<body>
+
+    <div id="app">
+        <header class="navbar has-sidebar border-red-100 border-2">
+            <div class="nav-wrapper">
+                <div class="header-container">
+                    <div class="logo-container" data-v-74f3ae96>
+                        <a style="width: 128px;">
+                            <img src="https://element-plus.org/images/element-plus-logo.svg" />
+                        </a>
+
+                    </div>
+                    <div class="content">
+                        <div id="docsearch" class="algolia-search-box search" data-v-74f3ae96="">
+                            <button type="button">search</button>
+                        </div>
+                        <div style="display: flex;" id="headerAHref">
+                            <a>指南</a>
+                            <a>组件</a>
+                            <a>资源</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="el-scrollbar sidebar">
+            <div class="el_scroll_view">
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+                <p>Button 按钮</p>
+
+            </div>
+
+        </div>
+
+        <div class="main border-2 border-amber-300">
+
+            <div class="doc-content-wrapper">
+                <div class="doc-content-container">
+                    <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+                <div class="toc-wrapper">
+                    aside
+                </div>
+
+            </div>
+            <div>footer</div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

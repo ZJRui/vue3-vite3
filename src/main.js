@@ -9,4 +9,6 @@ import Directives from './directives' // 引入指令模块
 // 引入组件库全局样式资源
 import 'tdesign-vue-next/es/style/index.css';
 
+import './indexTailwind.css'
+
 createApp(App).use(Router).use(Store).use(TDesign).use(Directives).mount('#app')
